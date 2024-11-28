@@ -2,9 +2,10 @@
 const fs = require('fs');
 const path = require('path');
 
-function initAider() {
+function initAider(projectDir) {
     const templatePath = path.join(__dirname, '../../templates/aider/.aider.conf.yml');
-    const targetPath = path.join(process.cwd(), '.aider.conf.yml');
+    const baseDir = projectDir || process.cwd();
+    const targetPath = path.join(baseDir, '.aider.conf.yml');
 
     // Check if config already exists
     if (fs.existsSync(targetPath)) {
@@ -25,7 +26,7 @@ function initAider() {
         const requiredFiles = ['README.md', 'docs/CONVENTIONS.md'];
         
         for (const file of requiredFiles) {
-            const filePath = path.join(process.cwd(), file);
+            const filePath = path.join(baseDir, file);
             if (!fs.existsSync(filePath)) {
                 console.warn(`Warning: ${file} does not exist`);
             }
