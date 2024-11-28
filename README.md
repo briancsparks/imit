@@ -5,11 +5,11 @@ times you want to init something, but that util does not have an init (or what i
 have isn't good enough.)
 
 Like: `imit aider` - does all the initialization for Aider in a project:
-- Initalizes `~~/.aider.conf.yml`
+- Initalizes `PROJECT_DIR/.aider.conf.yml`
   - read: [README.md, docs/CONVENTIONS.md]
   - cache-prompts: true
   - cache-keepalive-pings: 5
   - And a bunch more
 
 Checks for those files, fixes if not there.
- 
+
