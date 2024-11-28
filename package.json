@@ -4,7 +4,7 @@
   "description": "Like, for example, 'git init' but for tools without an init sub-command.",
   "main": "index.js",
   "bin": {
-    "imit": "./index.js"
+    "imit": "./bin/imit.js"
   },
   "directories": {
     "doc": "docs"
