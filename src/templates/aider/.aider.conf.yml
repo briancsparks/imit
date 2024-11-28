@@ -18,5 +18,5 @@ git-add: true
 git-commit: true
 
 # Model settings
-model: gpt-4-1106-preview
+model: claude-3-sonnet-20240229
 temperature: 0.0
