@@ -1,0 +1,14 @@
+{
+  "name": "imit",
+  "version": "1.0.0",
+  "description": "Like, for example, 'git init' but for tools without an init sub-command.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian C Sparks",
+  "license": "MIT"
+}
