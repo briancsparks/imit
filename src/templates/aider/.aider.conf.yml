@@ -9,14 +9,14 @@ cache-prompts: true
 # Keep connection alive with pings
 cache-keepalive-pings: 5
 
-# Editor settings
-edit-format: simple
-line-numbers: true
-
-# Git settings
-git-add: true
-git-commit: true
-
 # Model settings
-model: claude-3-sonnet-20240229
-temperature: 0.0
+model: claude-3-5-sonnet-20241022
+#temperature: 0.0
+
+## Editor settings
+#edit-format: simple
+#line-numbers: true
+#
+## Git settings
+#git-add: true
+#git-commit: true
