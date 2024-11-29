@@ -6,10 +6,10 @@ const { initAider } = require('../src/tools/aider');
 
 const args = process.argv.slice(2);
 const command = args[0];
-let projectDir = process.env.IMIT_PROJECT_DIR;
+let projectDir = process.env.IMMIT;
 
 if (!command) {
-    console.error('Please specify a command (e.g., "imit aider" or "imit aider /path/to/project")');
+    console.error('Please specify a command (e.g., "immit aider" or "immit aider /path/to/project")');
     process.exit(1);
 }
 

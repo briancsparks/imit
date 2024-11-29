@@ -1,10 +1,10 @@
 {
-  "name": "imit",
+  "name": "immit",
   "version": "1.0.0",
   "description": "Like, for example, 'git init' but for tools without an init sub-command.",
   "main": "index.js",
   "bin": {
-    "imit": "./bin/imit.js"
+    "immit": "./bin/immit.js"
   },
   "directories": {
     "doc": "docs"
