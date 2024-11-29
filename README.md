@@ -5,7 +5,7 @@ times you want to init something, but that util does not have an init (or what i
 have isn't good enough.)
 
 Like: `immit aider` - does all the initialization for Aider in a project:
-- Initalizes `PROJECT_DIR/.aider.conf.yml`
+- Initializes `PROJECT_DIR/.aider.conf.yml`
   - read: [README.md, docs/CONVENTIONS.md]
   - cache-prompts: true
   - cache-keepalive-pings: 5
