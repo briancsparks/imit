@@ -23,7 +23,7 @@ function initAider(projectDir) {
         console.log('Created .aider.conf.yml');
         
         // Verify required files exist
-        const requiredFiles = ['README.md', 'docs/CONVENTIONS.md'];
+        const requiredFiles = ['README.md', 'docs/CONVENTIONS.md', 'docs/project-description.md'];
         
         for (const file of requiredFiles) {
             const filePath = path.join(baseDir, file);
