@@ -33,6 +33,12 @@ function walkDir(dirPath) {
     return files.sort();
 }
 
+// If this file is run directly from node
+if (require.main === module) {
+    const dir = process.argv[2] || process.cwd();
+    console.log(walkDir(dir));
+}
+
 module.exports = {
     walkDir
 };
