@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { walkDir } = require('../../utils');
 
 function initProject(projectDir) {
     const templatePath = path.join(__dirname, '../../templates/project');
@@ -12,20 +13,30 @@ function initProject(projectDir) {
             fs.mkdirSync(docsDir, { recursive: true });
         }
 
-        // Copy template files
-        const files = ['docs/CONVENTIONS.md', 'docs/project-description.md'];
+        // Get template files
+        const templateFiles = walkDir(templatePath);
+        // Get existing files in target directory
+        const existingFiles = walkDir(baseDir);
         
-        for (const file of files) {
+        for (const file of templateFiles) {
+            // Skip if file already exists in target
+            if (existingFiles.includes(file)) {
+                console.log(`${file} already exists`);
+                continue;
+            }
+            
             const sourcePath = path.join(templatePath, file);
             const targetPath = path.join(baseDir, file);
             
-            if (!fs.existsSync(targetPath)) {
-                const content = fs.readFileSync(sourcePath, 'utf8');
-                fs.writeFileSync(targetPath, content);
-                console.log(`Created ${file}`);
-            } else {
-                console.log(`${file} already exists`);
+            // Ensure target directory exists
+            const targetDir = path.dirname(targetPath);
+            if (!fs.existsSync(targetDir)) {
+                fs.mkdirSync(targetDir, { recursive: true });
             }
+            
+            const content = fs.readFileSync(sourcePath, 'utf8');
+            fs.writeFileSync(targetPath, content);
+            console.log(`Created ${file}`);
         }
     } catch (error) {
         console.error('Error initializing project:', error.message);
