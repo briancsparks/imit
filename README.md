@@ -13,3 +13,19 @@ Like: `immit aider` - does all the initialization for Aider in a project:
 
 Checks for those files, fixes if not there.
 
+## Tools You Can Immit
+
+- `aider`
+- `project` - setup a skeleton project
+  - Has `docs/` dir, for example.
+- `cpp` - beyond what `project` gives you, `cpp` adds C/C++-specific files
+  - `src/inc/[PROJECT_NAME]/[PROJECT_NAME].hpp`
+  - etc.
+- `javascript` (`js`) - beyond what `project` gives you, `js` adds JavaScript-
+  specific files.
+- `python`, `go`, etc.
+
+## Special Help
+
+Running `immit aider --help` tells you the manual way to accomplish the `immit aider`
+functionality.
