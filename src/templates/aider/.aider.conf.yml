@@ -2,6 +2,7 @@
 read:
   - README.md
   - docs/CONVENTIONS.md
+  - docs/project-description.md
 
 # Enable prompt caching to improve performance
 cache-prompts: true
