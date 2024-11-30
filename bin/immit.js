@@ -7,7 +7,7 @@ const { initProject } = require('../src/tools/project');
 
 const args = process.argv.slice(2);
 const command = args[0];
-let projectDir = process.env.IMMIT;
+let projectDir = process.env.IMMIT_WORK_DIR;
 
 if (!command) {
     console.error('Please specify a command (e.g., "immit aider" or "immit project")');
